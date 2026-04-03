@@ -7,6 +7,7 @@
 		"dev:vite": "vite",
 		"dev:nodecg": "npx nodecg start",
 		"generate-schema-types": "nodecg schema-types -o ./src/types/generated",
+        "clean": "trash node_modules/.cache && trash dashboard && trash extension",
 		"build": "vite build"
 	},
 	"nodecg": {
@@ -38,7 +39,7 @@
 				"file": "ObsControl.html",
 				"width": 1920,
 				"height": 1080,
-				"singleInstance": false
+				"singleInstance": true
 			}
 		]
 	},
@@ -58,8 +59,6 @@
 		"prettier-plugin-organize-imports": "^4.2.0",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
-		"rollup-plugin-esbuild": "^6.1.1",
-		"rollup-plugin-node-externals": "^7.1.3",
 		"trash-cli": "^6.0.0",
 		"typescript": "^5.6.2",
 		"vite": "^8.0.3"
